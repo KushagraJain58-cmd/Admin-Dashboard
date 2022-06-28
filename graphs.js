@@ -95,7 +95,7 @@ var dd = d.getDate;
 var month = d.getMonth;
 
 const dates = ['21-Dec','22-Dec','23-Dec','24-Dec','25-Dec','26-Dec','27-Dec', '28-Dec', '29-Dec'];
-const datapoints = [300,700,2000,5000,6000,4000,2000,1000,800, 7000];
+const datapoints = [30,70,200,500,600,400,200,100,800, 700];
 
 new Chart("myChart", {
   type: "line",
