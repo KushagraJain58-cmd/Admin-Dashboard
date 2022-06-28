@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <!-- Boxicons CDN Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="sidebar1">
+      <ul class="nav-list">
+
+        <div class="list">
+          <li>
+            <a href="">
+              <i class='bx bxs-home'></i><br>
+              <span class="links_name">Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <i class='bx bxl-microsoft-teams'></i><br>
+              <span class="links_name">HR</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <i class='bx bx-layer-plus'></i><br>
+              <span class="links_name active">VMS</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <i class='bx bx-user-circle'></i><br>
+              <span class="links_name">Profile</span>
+            </a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="sidebar">
+    <ul class="nav-list">
+
+      <div>
+
+        <li>
+          <a href="#">
+
+            <span class="links_name mx-auto">HUMAN RESOURCE <br> MANAGENMENT SYSTEM</span>
+          </a>
+          <span class="tooltip">HRMS</span>
+        </li>
+
+      </div>
+
+      <li>
+        <a href="index.html">
+          <i class='bx bx-grid-alt' style="color: blue;"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Employee</span>
+        </a>
+        <span class="tooltip">Empolyee</span>
+      </li>
+
+      <li>
+        <a href="">
+          <i class='bx bx-building-house'></i>
+          <span class="links_name">Departments</span>
+        </a>
+        <span class="tooltip">Departments</span>
+      </li>
+
+      <li>
+        <a href="">
+          <i class='bx bxs-wallet'></i>
+          <span class="links_name">Salary</span>
+        </a>
+        <span class="tooltip">Salary</span>
+      </li>
+    </ul> 
+  </div>
+
+  <section class="home-section">
+    <div style="padding: 0;">
+
+      <!-- Top navbar -->
+      <nav class="navbar navbar-expand-lg 
+                      navbar-light ">
+        <a class="navbar-brand" href="#">Jain Technologies</a>
+        <!-- Hamburger button that toggles the navbar-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        </div>
+      </nav>
+      <div class="jumbotron angled-gradient" style="margin-left: 1.5%; margin-right: 1.5%;">
+          <div class="container">
+            <h1 class="display-4" style="color: white; font-weight: 200;">Greetings, ADMIN!</h1>
+
+            <div class="dt dt1">
+
+            </div>
+            <br>
+            <a href="" class="btn btn-info btn-outline-light">VMS</a>
+            <a href="" class="btn btn-info btn-outline-light">HR</a>
+            <div class="dt">
+              <div class="time">
+                <div id="current_date">
+                  <div class="date">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      <div class="text">
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col col-md-6 col-lg-3 size">
+              <div class="shadow card" style="height: fit-content; border-top:solid 7px rgb(4, 212, 188)">
+                <div class="card-body" style="margin-left: 10px;">
+                  <div>
+                    <p class="card-text" style="color: rgb(3, 187, 165); font-weight:300; font-size: 1.125rem">Employees
+                      <span><img style="float: right;"
+                          src="data:image/png;base64,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" /></span>
+                    </p>
+                  </div>
+                  <div>
+                    <h1 class="card-title" style="color: rgb(36, 34, 34); font-size: 2.75rem;"> 300 </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-md-6 col-lg-3 size">
+              <div class="shadow card" style="height: fit-content; border-top:solid 7px rgb(4, 212, 188);">
+                <div class="card-body" style="margin-left: 10px;">
+                  <div>
+                    <p class="card-text" style="color: rgb(3, 187, 165); font-weight:300; font-size: 1.125rem">
+                      Departments
+                      <span><img style="float: right;"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAtlJREFUeF7tnNFRwzAMhuXm4BVGgFdKKd2gI8AGbAAbUEZgAkYAJqAblLYHrzBCeYUL5grlDigNkqI4NvnzLMnyZ0l2XDWO8JgScKbWYIwA1DgIABRAjQkYm0OEAqgxAWNzwSN0Op32yftjR9Qnok3j+ZQ1N/NEQ3LuvNPpDDXGggEdjUaba1l2SR8gU3iGL3l+2Ov1ZhJngwB9h9lq3ZBz+xLnapf1/na32+1J/AgCdDoeD5xzpxLHYpH13p91ut0B15/KgS5S/SHCesllNHvJ821u6lcO9H4yOXglmtfOZJ8W0eHO3t4VZwKVA0053T8BStK+VqASRznRUUamaOElfgLoYhUAtEw4/qILoAC6TEBSm4z5LZlDhBoTBlAAlaW8NmJC6/2cVbTHptBgtOMB6IqLDgA1BgOgAIpNyeRgok2lVPSS2ZRMVlNgRLuAALoCMoAKoo8jCqAcSgIZABXA4ogCKIeSQAZABbA4orUDDdSjJO410oLR6pU+NtXYo8TqNdKC0eqVAlp7jxKj10gLRqtXCmgMTQt//Q6lBaPVUwONqEepsNdIC0arpwYaU49SUa+RFoxWTw00hnT/dL4o7bVgtHqVAP2rrnHOgT9lrCbIHdtqPPaPdFYDhp5g6PEAdEHcKmAAFECJYq7ZiFBEaMMjVFvsU9ELfg5NBYzWTwA17jgBUABdftdp9Lu8tjalooeUTz3luZcTuG36QiDmV0HugmpLTPCU504IEYoI/TVWcDmCy5GGX46ghq4gYLULcgGnOh5qKGooaig3y7/JIeUFH4viEAZQAH2PE2xKMW5KnBROWUZy+WMSoSnD4vgOoBxKAhkAFcDiiFYC9G4yOfJEFxwH/ptMJV9nnPfYr2fZoyfa+G/AiubjiJ6e83yrku+Hzv/s5bw/mX+QuiFgr12WDdrt9i03iNi7PNdg0+UA1DgCABRAjQkYm0OEAqgxAWNziFBjoG9zH+ugtmGRMQAAAABJRU5ErkJggg==" /></span>
+                    </p>
+                  </div>
+                  <div>
+                    <h1 class="card-title" style="color: rgb(36, 34, 34); font-size: 2.75rem;"> 
+                      7
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-md-6 col-lg-3 size">
+              <div class="shadow card" style="height: fit-content; border-top:solid 7px rgb(4, 212, 188); ">
+                <div class="card-body" style="margin-left: 10px;">
+                  <div>
+                    <p class="card-text" style="color: rgb(3, 187, 165); font-weight:300; font-size: 1.125rem">
+                      Applications
+                      <span><img style="float: right;"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAABD9JREFUeF7tnL+P3EQUx79vrXSRCPAHkFCgzXlnnKVNQbYnIrRECIkACgKlREgUhIYUqZBQSIgiAQXFNXdJlJpr6IC7HXuRUIpcj1baVCmC/ZDvWIn8sHfse3t3s/vc+s3X8z7+vtnZt14T9BAlQKJqKgYFKmwCBapAhQkIy6lDFagwAWE5dagCFSYgLKcOVaDCBITl1KEKVJiAsJw69KCAOudMRPQuM78O4BSAl4XnctjkxgxsEvA7RdFPcRz/6TNBL4eOnPucgSs+ggsawwRciq39dlZ+M4GmaXqJmL+ZJbQM5wk4H1v7c12utUBHo9GpIs9/IyBaBmAeOT6K8nzlZL+/XRVbCzR1bo2Acx4XWp4Qoms9Yz5pBXTk3ISBF5aHlkemRPd7xrzWCmjmHHtcYulCetZWVnZtydcBrRNdBMJtc1egFXdfgQqXhQJVoMIEhOXUoQpUmICwXHAOXV1djVa63QtgPgui0zs8iH4F893YmFtElAszaiQXFNDMuQ8BfD8jw4961t5sREEwOBigWZZ9gKLwBXVgUIMAysydUZo2KuW/x+Mjg8HgnzrzjdL0yzbmjI35qmpcEEA9S/2JHAvgorX2Rh2wtj2Huq/PYQBN0zs7H0INDgLuxda+qUCfQyBzbgzgpQY8wcDEWPuiAlWgzxJou45ULvRa8tUN5jb9UP1QqunYtwE6r21TOhxebrIuT2NNklSOa1ud+95g1o19xa1v49CplGfpH9i3pHKewTh0CrVsjnS73QsdbY7sItmLQ9usd/s9JjiH7jegptcLEmj5qE+e5088SBFF0cM4jreaApCODwZoNhy+x0TnCDgD4FgFiPKJlQ1iXu8lyY9NYKVpeqYDvOEzJuhuUwkSROW+77hPsv+L2QbzZV+w5Z6UiLzaeUF2mzY3N48diaI17DpyL8fG4zx/u9/vT+pEFhpouUZynv9SU9pNAU8oigZ1a+zCAv3PmQ8EYU7hTx7n+Ykqpy4s0My50pl7LfMqB2/0rB087+RCAi0/aYm5BDq3g4kGxpiNpy+wkEAz59YBvDU3mrvCt3vWPvN0dXkzURRelRFMtylzrlw7m26PmvLf7ll7oukg3/hDtbFv+yukb7LTuHn2ExRo07sxI/5QARXO7UDkFKgwdgWqQIUJCMupQxWoMAFhOXVo6ECF5x+UXPu/Jg6H2yB6Jahs5zxZAh7E1r5adZn6/8s7d4uB9+c8x6Dkifl6nCQftwO6tdXnTuePoDKe72SLnHklSZK/WgEtB42Gw++Y6OJ85xmGOhFdjY35rG62M985sgM1Ta8xc6XNw8Cxt1kS0dexMV/MUvECWoqUrxnqAJ8CeAfA0VnCC3J+zMw/REVxY6Xfv++TkzdQHzGNgb7UWtoE6lBhogpUgQoTEJZThypQYQLCcupQBSpMQFhOHapAhQkIy6lDFagwAWE5dagw0H8B2uy6cziJFokAAAAASUVORK5CYII=" /></span>
+                    </p>
+                  </div>
+                  <div>
+                    <h1 class="card-title" style="color: rgb(36, 34, 34); font-size: 2.75rem;"> 
+                      4
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col col-md-6 col-lg-3 size">
+              <div class="shadow card" style="height: fit-content;border-top:solid 7px rgb(4, 212, 188); ">
+                <div class="card-body" style="margin-left: 10px;">
+                  <div>
+                    <p class="card-text" style="color: rgb(3, 187, 165); font-weight:300; font-size: 1.125rem">Vacancies
+                      <span><img style="float: right;"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAytJREFUeF7tnM9100AQxmckA0fSAldiy7gCTAU4HdBBQgWECiAVQAeECuIObEsJV1owR3Dk4Qns94BEq9Fm/4jo09U7M7u//WbGq/e0THicEmCn3uCMANSxCAAUQB0TcOwOCgVQxwQcuwuu0KIopiRyzERTIjpwvJ69u7UQzYn5bDQazT3FuNVtMKCLxeLgQZp+ot8gQz7zTVkeTSaTdYigQYD+gpkkF8T8LMSibsQQWQ7H40mI2EGAFqvVKTO/CbGguhgi8nY0Hp/6noN3oLtU/+qxXmoZrTdl+cR36nsH+iXPZ1uiqnZGfxKio6dZdu5zIt6BdiHd9wBDpH1UoD4WaNpAH/H+VTuAOs5/AAVQMwGkvOP/hgAKoO2KTmjFhI5n3eWrE8/DweBYtttZtDN5u728+2iRJSfJ+Y/r6zPtCUvV5a/y/JUQvevA8fHukOw8rJno9WGWfWwybwS6g/mhyVEfftccXY1AO/Rioyv71fiCxQi0S+fwrhBtOr4agV6uVoveNCDtjjW8rDYDzXPRxunTuGGW1XKzBmpyemnYCJOdj02xnYutHYDW7CKAOgYDoADqo2Le9GmrNFs71FDHygZQAG1XKmxT19YOCoVCodC/COCkVCMIHD1vB4MaihqKGooauidg+1/M1q6d9nSjbedia4caihqqU2asLINCoVAoFF0+Vv1ppz3daNtubWuHGooaqlNmrCyDQqFQKBRdPlb9aac93Wjbbm1rhxqKGqpTZqwsg0KhUCgUXT5W/WmnPd1o225ta4caihqqU2asLINCodB7qlBmrr0DSURqfzPZtUOlG207F5Od9Wc1V3le3SH3WDf1foxiom+HWVZ7Z19TDa3uOHrZD1TqVX4eZtmsbrT5W8+imLLIhTpUDwYK8wvTjY+az7vnQvS8B6w0SzSqs3LQCHT3iXd1B+dYE/Eej1ltynLadLNDI9AKUAV1kCQnCfNJ35pU1YS2Iu+1NzuqgO5VV4F9lKbTUiTOPaCB5Z8yL7+X5bxJlX9OqxXQwOv5L8MBqONtA1AAdUzAsTsoFEAdE3DsDgoFUMcEHLuDQgHUMQHH7n4C2k6JgnvDpdMAAAAASUVORK5CYII=" /></span>
+                    </p>
+                  </div>
+                  <div>
+                    <h1 class="card-title" style="color: rgb(36, 34, 34); font-size: 2.75rem;"> 2</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-lg-6 size">
+              <div>
+                <div class="card shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Departments</h5>
+                    <hr style="margin-left: -20px; margin-right: -20px;">
+                    <canvas id="Chart2" style="width:690px; height:500px"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-5 size">
+              <div class="wrapper shadow" style="margin-left: 12%; width: 95%;">
+                <header style="font-weight: 300;">Todo List</header>
+                <hr style="margin-right: -6%; margin-left: -6%;">
+                <div class="todoField">
+                  <input type="text" placeholder="Add your new todo">
+                  <button type="submit"><i class="fas fa-plus"></i></button>
+                </div>
+                <ul class="todoList">
+                  <!-- data are comes from local storage -->
+                </ul>
+                <div class="footer">
+                  <span>You have <span class="pendingTasks"></span> pending tasks</span>
+                  <button>Clear All</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-6" style=" margin-bottom: 30px;">
+              <div>
+                <div class="card shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Salary Dispersion</h5>
+                    <hr style="margin-left: -20px; margin-right: -20px;">
+                    <canvas id="myChart1" style="width:690px; height:500px"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <div>
+                <div class="card shadow">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Deals</h5> -->
+
+                    <h5 class="card-title">Deals</h5>
+
+                    <hr style="margin-left: -20px; margin-right: -20px;">
+                    <canvas id="myChart" style="width:690px; height:500px"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+  </section>
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  <script>
+    var date = new Date();
+        var month = date.getMonth();
+        var dt = date.getDate();
+        var year = date.getFullYear();
+        var day = date.getDay();
+        var time = date.toLocaleTimeString();
+        var textMonth;
+        var textDay;
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        for (var i = 0; i < months.length; i++) {
+          if (i === month) {
+            textMonth = months[i];
+          }
+        }
+        for (var i = 0; i < days.length; i++) {
+          if (i === day) {
+            textDay = days[i];
+          }
+        }
+        document.querySelector(".date").innerHTML = textDay + ", " + dt + " " + textMonth + " " + year;
+        document.querySelector(".dt1").innerHTML = time;
+    // getting all required elements
+    const inputBox = document.querySelector(".todoField input");
+    const addBtn = document.querySelector(".todoField button");
+    const todoList = document.querySelector(".todoList");
+    const deleteAllBtn = document.querySelector(".footer button");
+
+    // onkeyup event
+    inputBox.onkeyup = () => {
+      let userEnteredValue = inputBox.value; //getting user entered value
+      if (userEnteredValue.trim() != 0) { //if the user value isn't empty
+        addBtn.classList.add("active"); //active the add button
+      } else {
+        addBtn.classList.remove("active"); //unactive the add button
+      }
+    }
+
+    showTasks(); //calling showTask function
+
+    addBtn.onclick = () => { //when user click on plus icon button
+      let userEnteredValue = inputBox.value; //getting input field value
+      let getLocalStorageData = localStorage.getItem("New Todo"); //getting localstorage
+      if (getLocalStorageData == null) { //if localstorage has no data
+        listArray = []; //create a blank array
+      } else {
+        listArray = JSON.parse(getLocalStorageData);  //transforming json string into a js object
+      }
+      listArray.push(userEnteredValue); //pushing or adding new value in array
+      localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
+      showTasks(); //calling showTask function
+      addBtn.classList.remove("active"); //unactive the add button once the task added
+    }
+
+    function showTasks() {
+      let getLocalStorageData = localStorage.getItem("New Todo");
+      if (getLocalStorageData == null) {
+        listArray = [];
+      } else {
+        listArray = JSON.parse(getLocalStorageData);
+      }
+      const pendingTasksNumb = document.querySelector(".pendingTasks");
+      pendingTasksNumb.textContent = listArray.length; //passing the array length in pendingtask
+      if (listArray.length > 0) { //if array length is greater than 0
+        deleteAllBtn.classList.add("active"); //active the delete button
+      } else {
+        deleteAllBtn.classList.remove("active"); //unactive the delete button
+      }
+      let newLiTag = "";
+      listArray.forEach((element, index) => {
+        newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+      });
+      todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
+      inputBox.value = ""; //once task added leave the input field blank
+    }
+
+    // delete task function
+    function deleteTask(index) {
+      let getLocalStorageData = localStorage.getItem("New Todo");
+      listArray = JSON.parse(getLocalStorageData);
+      listArray.splice(index, 1); //delete or remove the li
+      localStorage.setItem("New Todo", JSON.stringify(listArray));
+      showTasks(); //call the showTasks function
+    }
+
+    // delete all tasks function
+    deleteAllBtn.onclick = () => {
+      let getLocalStorageData = localStorage.getItem("New Todo"); //getting localstorage
+      if (getLocalStorageData == null) { //if localstorage has no data
+        listArray = []; //create a blank array
+      } else {
+        listArray = JSON.parse(getLocalStorageData);  //transforming json string into a js object
+        listArray = []; //create a blank array
+      }
+      localStorage.setItem("New Todo", JSON.stringify(listArray)); //set the item in localstorage
+      showTasks(); //call the showTasks function
+    }
+
+  </script>
+
+  <script src="./graphs.js"></script>
+
+</body>
+
+</html>

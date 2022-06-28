@@ -1,0 +1,354 @@
+:root{
+    --primary-color : rgb(1, 130, 115);
+    --secondary-color:#EBAE40;
+    --primary-dark:#181D24;
+    --grey1:#696B73;
+    --grey2:#CBCBCB;
+    --grey3:#F5F6F8;
+    --white:#fff;
+    --bluish-grey:#C2CFE0;
+}
+
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgba(1, 130, 115, .15);
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  left: 70px;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: var(--grey3);
+  padding: 6px 14px;
+  z-index: 9;
+  transition: all 0.5s ease;
+}
+
+.sidebar #btn:hover {
+  opacity: 65%;
+}
+
+.sidebar i {
+  color: var(--grey1);
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+  background: var(--grey3);
+}
+
+.sidebar .nav-list {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+  top: 11%;
+}
+
+.sidebar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 25px);
+  z-index: 3;
+  background: var(--grey3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+
+.sidebar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar li a .links_name {
+  color: var(--grey1);
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+  transition: all 0.25s ease;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.sidebar li i {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+
+/*********Date****************/
+.dt{
+    float: right;
+    color: white;
+}
+.angled-gradient {
+      background: linear-gradient(55deg, #17a2b8, rgba(23, 162, 184, 0.5));
+    }
+
+.home-section {
+  position: relative;
+  min-height: 100vh;
+  left: 148px;
+  width: calc(100% - 148px);
+  transition: all 0.5s ease;
+}
+
+.home-section .text {
+  color: var(--grey1);
+  margin: 18px;
+}
+
+.sidebar1 {
+  position: fixed;
+  left: 0px;
+  top: 0;
+  height: 100%;
+  width: 70px;
+  background: var(--grey3);
+  padding: 6px 10px;
+  z-index: 9;
+  transition: all 0.5s ease;
+  border: var(--grey2) 0.5px solid;
+}
+
+.sidebar1 i {
+  color: var(--grey1);
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+  background: var(--grey3);
+}
+
+.sidebar1 li {
+  position: relative;
+  margin: 10px 3px;
+  list-style: none;
+}
+
+.sidebar1 li a:hover {
+  opacity: 65%;
+  text-decoration: none;
+}
+
+.sidebar1 li a .links_name {
+  color: var(--grey1);
+  font-size: 12px;
+  text-align: center;
+  margin-left: 12px;
+}
+
+.sidebar1 li i {
+  height: 20px;
+  line-height: 20px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+.sidebar1 li a .links_name:active {
+  font-weight: 500;
+}
+
+.sidebar1 .links_name {
+  margin-top: -20px;
+}
+
+.sidebar1 .list {
+  margin: 150px 0px;
+}
+
+.list li {
+  padding-top: 50%;
+}
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip {
+    display: none;
+  }
+}
+
+.card-title {
+  font-weight: 400;
+  font-size: large;
+}
+
+/* *************************************** */
+/* *************************************** */
+
+/* DASHBOARD */
+
+/* *************************************** */
+/* *************************************** */
+
+
+.size {
+  margin-bottom: 30px;
+}
+
+/* todolist */
+.wrapper {
+  background: #fff;
+  /* max-width: 400px; */
+  width: 100%;
+  /* margin: 0.2% 1.5%; */
+  padding: 25px;
+  border-radius: 3px;
+
+}
+
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.wrapper .todoField {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+
+.todoField input {
+  width: 89%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.todoField input:focus {
+  border-color: rgb(3, 187, 165);
+}
+
+.todoField button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: rgb(3, 187, 165);
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.todoField button:hover,
+.footer button:hover {
+  background: rgb(1, 124, 110);
+}
+
+.todoField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .todoList {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.todoList li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 8px;
+  background: #f2f2f2;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: default;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.todoList li .icon {
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e74c3c;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.todoList li:hover .icon {
+  right: 0px;
+}
+
+.wrapper .footer {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer button {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: rgb(3, 187, 165);
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
